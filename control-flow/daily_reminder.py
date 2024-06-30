@@ -5,5 +5,7 @@ time =input("Is it time-bound? (yes/no):")
 match time:
     case "yes":
         print(f"Reminder: '{task}' is a {priority} priority task that requires immediate attention today!")
+        break
     case "no":
-        print(f"Note: '{task}' is a {priority} priority task. Consider completing it when you have free time.")  
+        print(f"Note: '{task}' is a {priority} priority task. Consider completing it when you have free time.") 
+        break
