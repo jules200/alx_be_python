@@ -12,19 +12,19 @@ def main():
     
     while True:
         display_menu()
-        option = input("Your choice: ")
-        if option == "1":
+        option = int(input("Your choice: "))
+        if option == 1:
             item = input("Enter new item: ")
             shopping_list.append(item)
             pass
-        elif option == "2":
+        elif option == 2:
             item = input("Enter item to remove: ")
             shopping_list.remove(item)
             pass
-        elif option == "3":        
+        elif option == 3:        
             print(f"This is your shopping list: \n {shopping_list}")
             pass
-        elif option == "4":
+        elif option == 4:
             break
         else:
             print("Enter the valid Option")
