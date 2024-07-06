@@ -1,6 +1,6 @@
-shopping_list = []
-print(shopping_list)
-def shopping(option):
+
+def main(option):
+    shopping_list = []
     if option == "1":
         item = input("Enter new item: ")
         shopping_list.append(item)
@@ -25,7 +25,7 @@ def display_menu():
     print("3. View List")
     print("4. Exit")
     option = int(input("Your choice: "))
-    return shopping(option)
+    return main(option)
 
 display_menu()
 
