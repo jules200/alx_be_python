@@ -18,14 +18,14 @@ def shopping(option):
         print("Enter the valid Option")
         return theoptions()
 
-def theoptions():
+def display_menu():
     print("Choose the option")
     print("1. Add Item")
     print("2. Remove Item")
     print("3. View List")
     print("4. Exit")
-    option = input("Your choice: ")
+    option = int(input("Your choice: "))
     return shopping(option)
 
-theoptions()
+display_menu()
 
