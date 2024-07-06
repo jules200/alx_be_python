@@ -14,7 +14,7 @@ def main():
         display_menu()
         option = int(input("Your choice: "))
         if option == 1:
-            item = input("Enter new item: ")
+            item = input("Enter the item to add: ")
             shopping_list.append(item)
             pass
         elif option == 2:
