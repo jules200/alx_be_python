@@ -9,8 +9,11 @@ def perform_operation(num1, num2, operation):
         resp = num1 * num2
         return resp
     elif operation == "divide":
-        resp = num1 / num2
-        return resp
+        if num2 == 0:
+            return "Enter the valid number"
+        else:
+            resp = num1 / num2
+            return resp
     
 num1 = float(input("Enter the first number:"))
 num2 = float(input("Enter the second number:"))
