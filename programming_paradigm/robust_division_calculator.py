@@ -3,7 +3,7 @@ def safe_divide(numerator, denominator):
         try:
             num = float(numerator)
             den = float(denominator)
-            return print(num/den)
+            return print("The result of the division is"+ str(num/den))
         except:
             print("Error: Please enter numeric values only.")
     except:
