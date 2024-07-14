@@ -1,8 +1,8 @@
 import unittest
-from simple_calculator import simple_calculator
-
+from simple_calculator import SimpleCalculator
 class TestClass(unittest.TestCase):
-    test = simple_calculator
+    
+    test = SimpleCalculator
     def testadd(self):
         self.assertEqual(test.add(1, 2), 3)
     def testsubtract(self):
