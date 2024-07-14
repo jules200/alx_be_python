@@ -5,6 +5,6 @@ def safe_divide(numerator, denominator):
             den = float(denominator)
             return print(num/den)
         except:
-            print("Invalid in put")
+            print("Error: Please enter numeric values only.")
     except:
         print("Error: Cannot divide by zero.")
