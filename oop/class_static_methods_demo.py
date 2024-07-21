@@ -3,7 +3,8 @@ class Calculator:
     
     @staticmethod
     def add(a, b):
-        return f"The sum is: {a+b}"
+        ad = a+b
+        return f"The sum is: {ad}"
          
     @classmethod
     def multiply(cls, a, b):
