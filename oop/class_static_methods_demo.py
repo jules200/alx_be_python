@@ -4,7 +4,7 @@ class Calculator:
     @staticmethod
     def add(a, b):
         ad = a + b
-        return f"The sum is: {ad}"
+        return ad
          
     @classmethod
     def multiply(cls, a, b):
