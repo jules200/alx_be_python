@@ -3,27 +3,35 @@ class Book:
         self.title = title
         self.author = author
 
-    # def __del__(self):
-    #     print(f"Deleting {self.title}")
+    def __str__(self):
+        return f"'{self.title}' by {self.author}"
 
-    # def __str__(self):
-    #     return f"{self.title} by {self.author}, published in {self.year}"
-
-    # def __repr__(self):
-    #     return f"Book('{self.title}', '{self.author}', {self.year})"
-    
 class EBook(Book):
-    def __init__(self, file_size):
+    def __init__(self, title, author, file_size):
+        super().__init__(title, author)
         self.file_size = file_size
-    
+
+    def __str__(self):
+        return f"'{self.title}' by {self.author} [EBook, {self.file_size} MB]"
+
 class PrintBook(Book):
-    def __init__(self, page_count):
+    def __init__(self, title, author, page_count):
+        super().__init__(title, author)
         self.page_count = page_count
-        
-class Library(Book):
-    def __init__(self, books):
-        self.books = {}
-        
+
+    def __str__(self):
+        return f"'{self.title}' by {self.author} [PrintBook, {self.page_count} pages]"
+
+class Library:
+    def __init__(self):
+        self.books = []
+
     def add_book(self, book):
-        Book.title = "nbb"
-        Book.author = "popo"
+        if isinstance(book, Book):
+            self.books.append(book)
+        else:
+            raise ValueError("Only instances of Book, EBook, or PrintBook can be added to the library")
+
+    def list_books(self):
+        for book in self.books:
+            print(book)
